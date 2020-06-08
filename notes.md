@@ -6,7 +6,7 @@ Avant de commencer, **récupérer le jeu de données** en pièce jointe.
 Une fois ce fichier récupéré le **mettre en place sur une base de données en local** à partir de PhpMyAdmin ou Workbench (Wamp, Xamp ou Lamp).
 
 
-**OBJECTIFS**
+##OBJECTIFS
 
 Résoudre les problèmes **en utilisant uniquement du SQL** :
 
@@ -32,3 +32,8 @@ Afficher le nom de chaque apprenant avec son département de résidence.
 10. Afficher le résultat du 9) dans une page php (utiliser PDO pour la connexion).
 
 11. Exporter votre code sur votre espace perso en utilisant PhpMyadmin et un client FTP.
+
+## Docker containers pour l'exercice
+
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d mysql
+docker run --rm --link mysql:mysql -p 1234:80 nazarpc/phpmyadmin
