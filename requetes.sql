@@ -14,5 +14,5 @@ SELECT * FROM `datas` WHERE `country_code` REGEXP '^N.$'
 SELECT * FROM `datas` WHERE `email` REGEXP '.?google.?'
 
 -- Répartition par Etat et le nombre d’enregistrement par état (croissant)
-
+SELECT state_code, COUNT(state_code) FROM datas GROUP BY state_code ORDER BY 2 DESC
 
