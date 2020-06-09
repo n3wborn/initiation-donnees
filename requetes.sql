@@ -16,3 +16,6 @@ SELECT * FROM `datas` WHERE `email` REGEXP '.?google.?'
 -- Répartition par Etat et le nombre d’enregistrement par état (croissant)
 SELECT state_code, COUNT(state_code) FROM datas GROUP BY state_code ORDER BY 2 DESC
 
+-- Insérer un utilisateur, lui mettre à jour son adresse mail puis supprimer l’utilisateur
+INSERT INTO datas (first_name, last_name, email) VALUES ('John', 'Doe', 'john.doe@maildomain.com')
+DELETE FROM datas WHERE first_name LIKE 'John' AND last_name LIKE 'Doe'  AND `email` LIKE 'john.doe@maildomain.com'
