@@ -36,4 +36,4 @@ Afficher le nom de chaque apprenant avec son département de résidence.
 ## Docker containers pour l'exercice
 
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d mysql
-docker run --rm --link mysql:mysql -p 1234:80 nazarpc/phpmyadmin
+docker run --rm --link mysql:mysql -p 8080:80 nazarpc/phpmyadmin
