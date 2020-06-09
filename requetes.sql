@@ -23,3 +23,13 @@ DELETE FROM datas WHERE first_name LIKE 'John' AND last_name LIKE 'Doe'  AND `em
 -- Nombre de femme et d’homme
 SELECT COUNT(*) FROM datas WHERE `gender` LIKE 'Female'
 SELECT COUNT(*) FROM datas WHERE `gender` LIKE 'Male'
+
+-- Afficher l'âge de chaque personne, puis la moyenne d’âge générale, celle des femmes puis celle des hommes.
+-- Date de naissance :
+-- SELECT last_name, first_name, STR_TO_DATE(`birth_date`,'%d/%m/%Y') FROM datas ORDER BY 3
+-- Age
+SELECT first_name, last_name, TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE()) FROM datas
+-- moyenne
+SELECT AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) FROM datas
+-- moyenne femmes / hommes
+SELECT gender, AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) FROM datas GROUP BY gender
