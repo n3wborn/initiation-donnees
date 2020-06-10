@@ -33,3 +33,13 @@ SELECT first_name, last_name, TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%
 SELECT AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) FROM datas
 -- moyenne femmes / hommes
 SELECT gender, AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) FROM datas GROUP BY gender
+
+-- 9 - Creation de la table des apprenants d' ACS
+USE initiation;
+CREATE TABLE apprenants (
+  ID INT(9) NOT NULL AUTO_INCREMENT,
+  nom VARCHAR(100) NOT NULL,
+  prenom VARCHAR(100) NOT NULL,
+  departement INT(3) NOT NULL,
+  PRIMARY KEY (ID)
+);
