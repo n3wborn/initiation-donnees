@@ -63,3 +63,14 @@ VALUES
  ('Stéphane','PLUCHART','70'),
  ('Vanessa','KNORR','25');
 
+-- 9 - Afficher le nom de chaque apprenant avec son nom et son departement de residence
+-- (j' ai utilisé ORDER BY sur les resultats pour trier les noms par ordre alphabetique)
+SELECT
+apprenants.nom,
+departement.departement_code,
+departement.departement_nom
+FROM apprenants
+INNER JOIN departement
+WHERE apprenants.departement = departement.departement_code
+ORDER BY `apprenants`.`nom` ASC;
+
