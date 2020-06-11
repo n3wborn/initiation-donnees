@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="favicon.ico">
     <title>Initiation Aux Données</title>
 </head>
 
-<body>
 	<header>
-		<menu>
-			<nav>
-				<ul>
-					<li>Exercice 1</li>
-					<li>Exercice 2</li>
-					<li>Exercice 3</li>
-					<li>Exercice 4</li>
-					<li>Exercice 5</li>
-					<li>Exercice 6</li>
-					<li>Exercice 7</li>
-					<li>Exercice 8</li>
-					<li>Exercice 9</li>
-				</ul>
-			</nav>
+		 <nav class="nav">
+			<ul>
+			  <li class="menu-item"><a href="index.php">Exo 1</a></li>
+			  <li class="menu-item"><a href="exercice2.php">Exo 2</a></li>
+			  <li class="menu-item"><a href="exercice3.php">Exo 3</a></li>
+			  <li class="menu-item"><a href="exercice4.php">Exo 4</a></li>
+			  <li class="menu-item"><a href="exercice5.php">Exo 5</a></li>
+			  <li class="menu-item"><a href="exercice6.php">Exo 6</a></li>
+			  <li class="menu-item"><a href="exercice7.php">Exo 7</a></li>
+			  <li class="menu-item"><a href="exercice8a.php">Exo 8a</a></li>
+			  <li class="menu-item"><a href="exercice8b.php">Exo 8b</a></li>
+			  <li class="menu-item"><a href="exercice8c.php">Exo 8c</a></li>
+			  <li class="menu-item"><a href="exercice9.php">Exo 9</a></li>
+		</ul>
+		</nav>
 
 	  <h1>Initiation aux Données</h1>
-  
+	</header>
