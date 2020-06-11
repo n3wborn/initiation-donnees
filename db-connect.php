@@ -4,8 +4,8 @@ $user = 'stephanep460';
 $password = 'lWKt+esA1AvVhA==';
 
 try {
-  $base = new PDO($dsn, $user, $password);
-  $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $connexion = new PDO($dsn, $user, $password);
+  $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
   echo 'Connexion échouée : ' . $e->getMessage();
 }
