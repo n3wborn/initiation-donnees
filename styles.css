@@ -89,11 +89,15 @@ ul {
 
 li {list-style: none;}
 
-a {text-decoration: none;}
+a, a:visited {
+	text-decoration: none;
+}
 
 h1 {
-
 	text-align: center;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	font-size: 2.5rem;
 }
 
 table {
@@ -108,7 +112,7 @@ table {
 td {padding: 1rem;}
 
 code {
-	font-style: Source, monospace, sans-serif;
+	font-family: Source, monospace, sans-serif;
 	background-color: black;
 	color: gainsboro;
 	padding: 0.7rem;
@@ -120,5 +124,6 @@ code {
 }
 
 h1, h2, h3, p, a, td {
-	font-style: Roboto;
+	font-family: Roboto;
+	color: rgb(40,44,52);
 }
