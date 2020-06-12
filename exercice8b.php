@@ -3,14 +3,14 @@
 
 <?php
 
-    $sql="SELECT AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) AS Moyenne FROM datas";
+$sql="SELECT AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) AS Moyenne FROM datas";
 
-    if(!$connexion->query($sql)) echo "Y a un bug dans la matrice mec";
-    else{
-?>
+if(!$connexion->query($sql)) echo "Y a un bug dans la matrice mec";
+else{
+    ?>
 
 
-
+    <main>
         <h2>Exercice 8 b</h2>
         
         <blockquote>Requête : Afficher la moyenne d' age</blockquote>
@@ -22,13 +22,13 @@
                 <td class="coloredbg">Moyenne</td>
             </tr>
 
-      <?php
-        foreach ($connexion->query($sql) as $row)
-            echo "<tr><td>" .$row['Moyenne']. "</td></tr>\n";
-      ?>
+            <?php
+            foreach ($connexion->query($sql) as $row)
+                echo "<tr><td>" .$row['Moyenne']. "</td></tr>\n";
+            ?>
         </table>
 
     <?php } ?>
-
-    </body>
+</main>
+</body>
 </html>
