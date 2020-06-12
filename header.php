@@ -9,6 +9,7 @@
     <title>Initiation Aux Données</title>
 </head>
 
+<body>
 	<header>
 		 <nav class="nav">
 			<ul>

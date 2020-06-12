@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 5</h2>
         <blockquote>Requête : Afficher la répartition par état et le nombre d’enregistrement par état (croissant)</blockquote>
         <code>SELECT country_code AS Etat, COUNT(country_code) AS Quantité FROM datas GROUP BY country_code ORDER BY 2 ASC</code>

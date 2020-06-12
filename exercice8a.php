@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 8 a</h2>
         
         <blockquote>Requête : Afficher l'âge de chaque personne</blockquote>

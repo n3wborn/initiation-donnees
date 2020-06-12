@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 8 c</h2>
         
         <blockquote>Requête : Afficher la moyenne d'age hommes femmes</blockquote>

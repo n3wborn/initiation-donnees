@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 8 b</h2>
         
         <blockquote>Requête : Afficher la moyenne d' age</blockquote>

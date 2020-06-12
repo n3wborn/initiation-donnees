@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 2</h2>
         <blockquote>Requête : Afficher toutes les femmes</blockquote>
         <code>SELECT first_name, last_name, gender FROM `datas` WHERE `gender` = 'Female'</code>

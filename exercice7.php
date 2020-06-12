@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 7</h2>
         <blockquote>Requête : Afficher le nombre de femmes et d’hommes</blockquote>
         <code>SELECT gender AS Sexe, COUNT(*) AS Quantité FROM datas GROUP BY gender;</code>

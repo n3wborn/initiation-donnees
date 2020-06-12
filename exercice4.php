@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 4</h2>
         <blockquote>Requête : Afficher tous les emails qui contiennent google</blockquote>
         <code>SELECT first_name, last_name, email FROM `datas` WHERE `email` REGEXP '.?google.?'</code>

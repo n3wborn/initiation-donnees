@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 1</h2>
         <blockquote>Requête : Afficher tous les gens dont le nom est palmer</blockquote>
         <code>SELECT last_name, first_name FROM `datas` WHERE `last_name` = 'palmer'</code>

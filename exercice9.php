@@ -3,7 +3,7 @@
 
 
 
-    <body>
+
         <h2>Exercice 9</h2>
         <blockquote>Requête : Créer/importer la table des apprenants de l'ACS et afficher leur departement </blockquote>
 

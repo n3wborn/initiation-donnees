@@ -10,7 +10,7 @@
 ?>
 
 
-    <body>
+
         <h2>Exercice 3</h2>
         <blockquote>Requête : Afficher tous les etats dont la lettre commence par N</blockquote>
         <code>SELECT first_name, last_name, gender, country_code FROM `datas` WHERE `country_code` REGEXP '^N.$'</code>
