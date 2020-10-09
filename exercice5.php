@@ -3,17 +3,21 @@
 
 <?php
 
-$sql="SELECT country_code AS Etat, COUNT(country_code) AS Quantité FROM datas GROUP BY country_code ORDER BY 2 ASC";
+$sql='SELECT country_code AS Etat, COUNT(country_code) AS Nombre FROM datas GROUP BY country_code ORDER BY 2 DESC';
 
 if(!$connexion->query($sql)) echo "Y a un bug dans la matrice mec";
-else{
-    ?>
+    else{
 
+?>
+    <!-- on va mettre les resultat au centre ici -->
+    <style type="text/css">
+        tr, td { text-align: center;}
+    </style>
 
     <main>
         <h2>Exercice 5</h2>
         <blockquote>Requête : Afficher la répartition par état et le nombre d’enregistrement par état (croissant)</blockquote>
-        <code>SELECT country_code AS Etat, COUNT(country_code) AS Quantité FROM datas GROUP BY country_code ORDER BY 2 ASC</code>
+        <code>SELECT country_code AS Etat, COUNT(country_code) AS Nombre FROM datas GROUP BY country_code ORDER BY 2 DESC</code>
         <table>
             <tr>
                 <td class="coloredbg">Etat</td>
@@ -22,7 +26,7 @@ else{
 
             <?php
             foreach ($connexion->query($sql) as $row)
-                echo "<tr><td>" .$row['Etat']. "</td><td>" . $row['Quantité']. "</td></tr>\n";
+                echo "<tr><td>" .$row['Etat']. "</td><td>" . $row['Nombre']. "</td></tr>\n";
             ?>
         </table>
 
