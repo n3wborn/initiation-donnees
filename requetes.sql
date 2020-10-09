@@ -8,30 +8,30 @@ SELECT last_name, first_name FROM `datas` WHERE `last_name` = 'palmer'
 SELECT first_name, last_name, gender FROM `datas` WHERE `gender` = 'Female'
 
 -- 3 - Tous les etats dont la lettre commence par N
-SELECT first_name, last_name, country_code FROM `datas` WHERE `country_code` REGEXP '^N.$'
+SELECT first_name, last_name, gender, country_code FROM `datas` WHERE `country_code` REGEXP '^N.$'
 
 -- 4 -  Tous les emails qui contiennent google
-SELECT first_name, last_name, email FROM `datas` WHERE `email` REGEXP '.?google.?'
+SELECT first_name, last_name, email FROM `datas` WHERE `email` LIKE "%google%"
 
 -- 5 -  Répartition par Etat et le nombre d’enregistrement par état (croissant)
-SELECT country_code AS Pays, COUNT(country_code) AS Quantité FROM datas GROUP BY country_code ORDER BY 2 ASC
+SELECT country_code AS Etat, COUNT(country_code) AS Nombre FROM datas GROUP BY country_code ORDER BY 2 DESC
 
 -- 6 -  Insérer un utilisateur, lui mettre à jour son adresse mail puis supprimer l’utilisateur
 INSERT INTO datas (first_name, last_name, email) VALUES ('John', 'Doe', 'john.doe@maildomain.com')
 DELETE FROM datas WHERE first_name LIKE 'John' AND last_name LIKE 'Doe'  AND `email` LIKE 'john.doe@maildomain.com'
 
 -- 7 -  Nombre de femme et d’homme
-SELECT gender AS Sexe, COUNT(*) AS Quantité FROM datas GROUP BY gender
+SELECT gender AS Sexe, COUNT(*) As Qte FROM datas  GROUP BY datas.gender
 
 --  8 - Afficher l'âge de chaque personne, puis la moyenne d’âge générale, celle des femmes puis celle des hommes.
 -- Date de naissance :
 -- SELECT last_name, first_name, STR_TO_DATE(`birth_date`,'%d/%m/%Y') FROM datas ORDER BY 3
 -- Age
-SELECT first_name, last_name, TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE()) AS Age FROM datas
+SELECT first_name AS Prenom, last_name AS Nom, TIMESTAMPDIFF(YEAR, STR_TO_DATE(datas.birth_date,'%d/%m/%Y'), CURDATE()) AS Age FROM datas LIMIT 25
 -- moyenne
 SELECT AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) AS Moyenne FROM datas
 -- moyenne femmes / hommes
-SELECT gender, AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) AS Age FROM datas GROUP BY gender
+SELECT gender AS Sexe, AVG(TIMESTAMPDIFF(YEAR, STR_TO_DATE(`birth_date`,'%d/%m/%Y'), CURDATE())) AS Age FROM datas GROUP BY gender
 
 -- 9 - Creation de la table des apprenants d' ACS
 USE initiation;
@@ -65,11 +65,11 @@ VALUES
 -- 9 - Afficher le nom de chaque apprenant avec son nom et son departement de residence
 -- (j' ai utilisé ORDER BY sur les resultats pour trier les noms par ordre alphabetique)
 	SELECT
-	    apprenants.nom AS Nom, 
+	    apprenants.nom AS Nom,
 	    departement.departement_code AS Code,
 	    departement.departement_nom AS Departement
 	FROM apprenants
 	INNER JOIN departement
 	WHERE apprenants.departement = departement.departement_code
-	ORDER BY `apprenants`.`nom` ASC; 
+	ORDER BY `apprenants`.`nom` ASC;
 
