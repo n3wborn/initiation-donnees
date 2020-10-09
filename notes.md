@@ -1,4 +1,4 @@
-#INITIATION AUX DONNÉES
+# INITIATION AUX DONNÉES
 
 Projet initiation aux données 3 jours
 
@@ -6,7 +6,7 @@ Avant de commencer, **récupérer le jeu de données** en pièce jointe.
 Une fois ce fichier récupéré le **mettre en place sur une base de données en local** à partir de PhpMyAdmin ou Workbench (Wamp, Xamp ou Lamp).
 
 
-##OBJECTIFS
+## OBJECTIFS
 
 Résoudre les problèmes **en utilisant uniquement du SQL** :
 
@@ -33,8 +33,22 @@ Afficher le nom de chaque apprenant avec son département de résidence.
 
 11. Exporter votre code sur votre espace perso en utilisant PhpMyadmin et un client FTP.
 
-## Docker containers pour l'exercice
 
-    docker run --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d mysql
+## Notes perso sur Docker
 
-    docker run --rm --link mysql:mysql -p 8080:80 nazarpc/phpmyadmin
+Au depart, je lançais un container [php-apache](https://hub.docker.com/r/webdevops/php-apache), [mariadb](https://hub.docker.com/_/mariadb) et pour finir, [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin).
+
+La methode etant "simple" quand on debut avec Docker, mais loin d'être optimale, on a vite meilleur temps d'utiliser [docker-compose](https://docs.docker.com/compose/) et se faire un [docker-compose.yml](https://docs.docker.com/compose/compose-file/).
+
+Pour l'utiliser, depuis le repertoire courant du projet :
+
+```bash
+docker-compose up
+```
+
+Ensuite, dans l'interface de phpmyadmin (localhost:8081 comme indiqué dans ledit fichier), on créé une nouvelle base de données qu'on nommera **initiation-donnees**.
+
+Une fois créée, et va lui faire importer le dump sql mis a disposition dans ce repo (bdd.sql) et le tour est joué. 
+
+Vu qu'on utilise des [volumes](https://docs.docker.com/storage/volumes/) pour mariadb et phpmyadmin, toutes les données modifiées en base de données seront sauvegardées.
+Il en sera ainsi jusqu' au moment où vous déciderez de [supprimer les volumes](https://docs.docker.com/storage/volumes/#remove-anonymous-volumes)
