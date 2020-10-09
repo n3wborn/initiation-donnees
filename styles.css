@@ -41,12 +41,17 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.1rem;
-	margin-left: 20%;
-	margin-right: 20%;
-	/*flex*/
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* conteneur principal */
+body > div {
+  width: 80%;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 menu {
@@ -73,7 +78,7 @@ a, a:visited {
 
 h1 {
 	text-align: center;
-    letter-spacing: 0.01rem;
+  letter-spacing: 0.01rem;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	font-size: 2.5rem;
@@ -84,18 +89,18 @@ h2 {
 }
 
 table {
-	margin-top: 5rem;
-	margin-bottom: 5rem;
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid purple;
-	box-shadow: 5px 5px 5px 0px rgba(40, 44, 52, 0.25);
-
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid purple;
+  box-shadow: 5px 5px 5px 0px rgba(40, 44, 52, 0.25);
 }
 
-td {padding: 1rem;}
 tr:nth-child(odd) { background-color: #CBD7E14F;}
+tr, td { text-align: center;}
+td {padding: 1rem;}
 
 code {
 	font-family: 'Courrier New', monospace, sans-serif;

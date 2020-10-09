@@ -7,5 +7,6 @@
 	<code>INSERT INTO datas (first_name, last_name, email) VALUES ('John', 'Doe', 'john.doe@maildomain.com')</code>
 	<code>DELETE FROM datas WHERE first_name LIKE 'John' AND last_name LIKE 'Doe'  AND `email` LIKE 'john.doe@maildomain.com'</code>
 </main>
+</div>
 </body>
 </html>
