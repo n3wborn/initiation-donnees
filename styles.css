@@ -37,14 +37,11 @@
     font-display: swap;
 }
 
+
 body {
   margin: 0;
   padding: 0;
-  font-size: 1.1rem;
-  /*flex*/
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  font-size: 1.2rem;
 }
 
 /* conteneur principal */
@@ -71,10 +68,7 @@ ul {
 }
 
 li {list-style: none;}
-
-a, a:visited {
-	text-decoration: none;
-}
+a, a:visited {text-decoration: none;}
 
 h1 {
 	text-align: center;
@@ -84,9 +78,15 @@ h1 {
 	font-size: 2.5rem;
 }
 
+h1, h2, h3, p, a, td {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(40,44,52);
+}
+
 h2 {
     font-size: 2rem;
 }
+
 
 table {
   margin-top: 5rem;
@@ -119,7 +119,50 @@ blockquote {
 	background-color: #CBD7E1;
 }
 
-h1, h2, h3, p, a, td {
-	font-family: 'Roboto', sans-serif;
-	color: rgb(40,44,52);
+
+/* responsive */
+
+@media only screen and (max-width:1099px) {
+
+  body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  header {width: 90%;}
+  main {width: 80%;}
 }
+
+
+@media only screen and (max-width:1030px) {
+
+  header  {width: 100%;}
+  main {width: 90%;}
+
+}
+
+
+@media only screen and (max-width:969px) {
+
+  main {width: 90%;}
+
+  /* on donne plus d espace aux liens de nav */
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {margin: 1rem 1rem;}
+}
+
+
+@media only screen and (max-width:699px) {
+
+  /* le contenu prend tout l espace*/
+  h2 {text-align: center;}
+  main {width: 98%;}
+}
+
