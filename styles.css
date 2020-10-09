@@ -95,6 +95,7 @@ table {
 }
 
 td {padding: 1rem;}
+tr:nth-child(odd) { background-color: #CBD7E14F;}
 
 code {
 	font-family: 'Courrier New', monospace, sans-serif;
