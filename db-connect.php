@@ -1,7 +1,7 @@
 <?php
-$dsn = 'mysql:dbname=stephanep460_;host=localhost';
-$user = 'stephanep460';
-$password = 'lWKt+esA1AvVhA==';
+$dsn = 'mysql:dbname=initiation-donnees;host=mariadb';
+$user = 'root';
+$password = 'mariadb';
 
 try {
   $connexion = new PDO($dsn, $user, $password);
