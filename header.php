@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="favicon.ico">
     <title>Initiation Aux Données</title>
 </head>
 
 <body>
 	<header>
-		 <nav class="nav">
+		 <nav>
 			<ul>
 			  <li class="menu-item"><a href="index.php">Exo 1</a></li>
 			  <li class="menu-item"><a href="exercice2.php">Exo 2</a></li>
